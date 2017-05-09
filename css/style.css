@@ -9,46 +9,42 @@
 body {
   margin: 0 auto;
   background: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   color: black;
-  /*background-image: url(../img/stars.jpg);*/
-  background-repeat: no-repeat;
-  background-size: 1500px;
   text-align: center;
   margin-top: 0;
 }
 
 /*========================================================
-          Sections
+          Format Section
 ========================================================*/
 /*changing title style*/
 h1 {
   font-size: 70px;
-  color: rgba(2,200,226,0.8);
+  font-weight: bold;
+  color: #A0D468;
   text-shadow: 2px 2px rgba(225, 225, 225, 0.1);
-  margin: 2px 0;
-  font-family: "Rochester",cursive;
   margin-bottom: 10px;
 }
 
 /*Changing input box style*/
-input, textarea {
+input{
   padding: 10px 1px;
   padding-right: 20px;
   margin: 0 auto;
-  width: 35%;
+  width: 25%;
   margin: 6px;
   font-size: 20px;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.8);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   color: black;
 }
 
 /*changing button box style*/
 #clickMe{
   border-style: none;
-  background: rgba(60,161,85,0.6);
+  background: #A0D468;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -58,61 +54,65 @@ input, textarea {
   box-shadow: rgba(0, 0, 0, 0.8);
 }
 
-.remove {
-  border-style: none;
-  background: transparent;
-  border: none;
-  color: gray;
-  text-align: right;
+
+/*========================================================
+          List Section
+========================================================*/
+/*move text to the right by 20px*/
+span {
+  margin-left: 20px;
+  font-family: 'Helvetica', Arial, sans-serif;
 }
 
-/*format text*/
-p {
-  padding: 10px 10px 0;
-}
-
+/*Edit list*/
 #list_items {
-  /*background: rgba(2,161,185,0.2);*/
   color: black;
   font-size: 16px;
-  /*border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.8);*/
+  border: none;
   margin: 0 auto;
   width: 35%;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
-  /*border: 1px solid rgba(2,161,185,0.6);*/
 }
 
-/*formatting list*/
-li {
-  /*list-style-type: none;*/
-  text-align: left;
-}
-
-li p:last-child {
-  border-bottom-color: white;
-  /*border-bottom-style: solid;*/
-}
-
-.color1 {
-  background-color: rgba(2,161,185,0.6);
-  /*border-top: 1px solid rgba(2,161,185,0.6);*/
-}
-
-.color2 {
-  background-color: rgba(2,161,185,0.2);
-}
-
-img {
-  width: 50px;
-}
-
+/*format the remove or delete button*/
 .remove {
   float: right;
-  background: transparent;
+  background: rgb(231, 236, 237);
+  border-radius: 3px;
   border: none;
-  margin: 10px 10px 0;
   color: #acb4c2;
-  font-size: 13px;
+  font-size: 15px;
+  padding: 3px 5px;
+}
+
+/*hightlight remove button when hover */
+.remove:hover {
+  background: rgb(230, 250, 230);
+}
+
+/*Format List*/
+ol li {
+  text-align: left;
+  padding: 20px 0;
+}
+
+/*Create a bullet before each list*/
+ol li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-radius: 100%;
+  background: #A0D468;
+  display: block;
+}
+
+/*Change color when the button is hover*/
+ol li:hover {
+  background: #FAFAFA;
 }

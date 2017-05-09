@@ -18,7 +18,7 @@ function addList (){
 
 
     var newParagraph = document.createElement('span');
-    var newText = document.createTextNode(count + ". " + userList);
+    var newText = document.createTextNode( userList);
     newParagraph.appendChild(newText);
     var addParragraphHere = document.getElementById('list'+count);
     addParragraphHere.appendChild(newParagraph);
@@ -36,7 +36,7 @@ function addList (){
     //delete content after pushing the button
     document.getElementById('list').value = "";
 
-    document.getElementById(newButton.id).onclick = function(){deleteList(newButton.id)};
+    document.getElementById(newButton.id).onclick = function(){deleteList(newList.id)};
 
     return count++;
 
@@ -45,17 +45,9 @@ return
 }
 
 
-function deleteList(buttonId){
-  var removeList = document.getElementById(buttonId);
-  // removeList.remove(removeList.selectedIndex)
+function deleteList(listId){
+  var removeList = document.getElementById(listId);
+  var containerList = removeList.parentNode;
+  containerList.removeChild(removeList);
+  console.log("List Removed");
 }
-
-
-//
-// document.getElementById('clickMe2').onclick = function (){ removeList()};
-//
-// function removeList (){
-//     var removeList = document.getElementsByTagName('li');
-//     var listLenght
-//
-// }
